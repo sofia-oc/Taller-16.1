@@ -1,0 +1,110 @@
+body {
+    background:#b67a20;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    position: relative;
+    top: -10px;
+    background-color: transparent;
+    background: linear-gradient(180deg,#ea9523, #b67a20);
+}
+
+input[type="search"], input[type="search"]:focus {
+    border-radius: 20px;
+    border-color: transparent;
+}
+
+input[type="search"], input[type="search"]:focus, .card, .offcanvas {
+    color: #e4e2e2;
+    background: linear-gradient(#16181c 0%, #121316 100%);
+    box-shadow: rgb(6, 7, 9) 0px -2px 0px -1px inset, rgba(255, 255, 255, 0.04) 0px 1px 0px inset;
+}
+
+img {
+    width: 100%;
+    border: solid #ea9523;
+    border-radius: 15px;
+}
+
+h3 {
+    color: #ea9523;
+}
+
+.card {
+    max-height: 300px;
+    border: #ea9523;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgb(6, 7, 9), -5px -5px 15px rgba(255, 255, 255, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-10px);
+}
+
+.card:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 5px 10px 20px rgb(6, 7, 9); /* Intensifica la sombra */
+    cursor: pointer;
+  }
+
+.card-body {
+    height: 140px;
+}
+
+
+.card-footer {
+    background-color: #ea9523;
+    color: #121316;
+    border-radius: 0 0 15px 15px !important;
+}
+
+.offcanvas {
+    height: 80vh;
+    width: 80%;
+    border-radius: 20px 20px 0 0;
+}
+
+.offcanvas-body {
+    padding-top: 0%;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.offcanvas-header {
+    display: flex;
+    justify-content: end;
+}
+
+.altIMG {
+    color: #ea9523;
+}
+
+@media (min-width: 1023px) {
+    header {
+        height: 60vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1022px){
+    .offcanvas {
+        height: 60vh;
+    }
+    header {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .offcanvas {
+        height: 100vh;
+    }
+    .offcanvas-body {
+        overflow:auto;   
+    }
+    header {
+        height: 30vh;
+    }
+}
