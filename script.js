@@ -42,7 +42,7 @@ function BAT(array) {
         
         const imagenUrl = personajeEncontrado ? `<img src="${personajeEncontrado.images.md}" alt=""></img>` : `<img src="character-unknown.png" alt=""></img>`;
 
-        let AliveOrDead = alive === true ? `<i class="fa-solid fa-heart-pulse alive"></i> <strong> Alive</strong>` : `<i class="fa-solid fa-heart-pulse dead"></i> <strong>Dead</strong>`;
+        let AliveOrDead = alive === true ? `<i class="fa-solid fa-heart-pulse alive"></i> <strong> Alive</strong>` : `<i class="fa-solid fa-heart-crack dead"></i> <strong>Dead</strong>`;
 
         container.innerHTML += ` 
             <div class="col-10 col-md-4 col-lg-3 m-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom_${id}" aria-controls="offcanvasBottom_${id}">
