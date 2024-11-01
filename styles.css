@@ -82,6 +82,13 @@ h3 {
     color: #ea9523;
 }
 
+.alive {
+    color: #f74040;
+}
+
+.dead {
+    color: #878787;
+}
 @media (min-width: 1023px) {
     header {
         height: 60vh;

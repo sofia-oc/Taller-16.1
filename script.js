@@ -42,6 +42,7 @@ function BAT(array) {
         
         const imagenUrl = personajeEncontrado ? `<img src="${personajeEncontrado.images.md}" alt=""></img>` : `<img src="character-unknown.png" alt=""></img>`;
 
+        let AliveOrDead = alive === true ? `<i class="fa-solid fa-heart-pulse alive"></i> <strong> Alive</strong>` : `<i class="fa-solid fa-heart-pulse dead"></i> <strong>Dead</strong>`;
 
         container.innerHTML += ` 
             <div class="col-10 col-md-4 col-lg-3 m-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom_${id}" aria-controls="offcanvasBottom_${id}">
@@ -63,18 +64,18 @@ function BAT(array) {
                     <div class="col-12 col-md-4 col-lg-4">
                         ${imagenUrl}
                     </div>
-                    <div class="col-12 col-md-7 col-lg-7">
+                    <div class="d-flex flex-column col-12 col-md-7 col-lg-7 mt-3 ps-2">
                         <h3 class="offcanvas-title" id="offcanvasBottomLabel">${name} - ${alias}</h3>
-                        <p> <strong>Alive:</strong> ${alive}</p>
+                        <p class="fs-6"> ${AliveOrDead}</p>
                         <hr>
-                        <div>
-                        <h6 class="card-text">${description}</h6>
+                        <div class="fs-6">
+                            <p class="mb-4">${description}</p>
                             <p> <strong>Role:</strong> ${role}</p>
                             <p> <strong>Gender:</strong> ${gender}</p>
                             <p> <strong>Abilities:</strong> ${abilities.map(abil => abil).join(' - ')}</p>
                         </div>
-                        <hr>
-                        <div>
+                        <div class="mt-3">
+                            <hr>
                             <p> <strong>Creator:</strong> ${creator}</p>
                             <small><strong>First appearance:</strong> ${first_appearance}</small>
                         </div>
