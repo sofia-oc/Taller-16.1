@@ -22,7 +22,6 @@ function getData(url) {
         .then(objects => {
             data = objects.data;
             BAT(data);
-            console.log("Personajes:", data);
         })
         .catch(error => {
             console.log("Error:", error)
