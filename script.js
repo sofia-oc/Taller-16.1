@@ -47,7 +47,7 @@ function BAT(array) {
             <div class="col-10 col-md-4 col-lg-3 m-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom_${id}" aria-controls="offcanvasBottom_${id}">
                 <div class="card" id="${name}">
                     <div class="card-body">
-                        <h5 class="card-title">${name} (${alias})</h5>
+                        <h4 class="card-title">${name} (${alias})</h4>
                         <p class="card-text">${description}</p>
                     </div>
                     <div class="card-footer p-2 pb-3">
@@ -64,7 +64,7 @@ function BAT(array) {
                         ${imagenUrl}
                     </div>
                     <div class="d-flex flex-column col-12 col-md-7 col-lg-7 mt-3 ps-2">
-                        <h3 class="offcanvas-title" id="offcanvasBottomLabel">${name} - ${alias}</h3>
+                        <h2 class="offcanvas-title" id="offcanvasBottomLabel">${name} - ${alias}</h2>
                         <p class="fs-6"> ${AliveOrDead}</p>
                         <hr>
                         <div class="fs-6">
